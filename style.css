@@ -1,0 +1,920 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: a;
+    src: url(./Assets/canelaweb-light.woff2);
+}
+
+@font-face {
+    font-family: b;
+    src: url(./Assets/canelaweb-thin.woff2);
+}
+
+@font-face {
+    font-family: x;
+    src: url(./Assets/cormorantgaramond-light.woff2);
+}
+
+@font-face {
+    font-family: y;
+    src: url(./Assets/cormorantgaramond-regular.woff2);
+}
+
+@font-face {
+    font-family: z;
+    src: url(./Assets/sackers.woff2);
+}
+
+nav{
+    height: 6vh;
+    /* height: 10vh; */
+    width: 100%;
+    background-color: #ffffff79;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 0.8px solid #4b4a4a;
+    z-index: 99999999;
+}
+
+nav .left.res, nav .right.res{
+    display: none;
+}
+
+nav .left ,nav .right{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vh;
+    /* background-color: red; */
+}
+
+nav svg{
+    width: 15vh;
+}
+
+nav a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    font-size: 1.6vh;
+    font-weight: 100;
+    position: relative;
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+
+.page1{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://www.polene-paris.com/cdn/shop/files/preview_images/741db1a2bd7848a4b9757ec16a0ad9f4.thumbnail.0000000000.jpg?v=1729666892&width=1600');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 2vh;
+
+}
+
+.page1 .product{
+    width: 24vw;
+    height: 58vh;
+    background-color: #ffffffa1;
+    padding: 2vh;
+    position: absolute;
+    bottom: 5vh;
+    border-radius: 3vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.page1 .text{
+    width: 100%;
+    font-family: a;
+}
+
+.page1 h3{
+    font-weight: 100;
+}
+
+.page1 img{
+    width: 60%;
+}
+
+.page2{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page2 .upper{
+    width: 100%;
+    height: 65vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page2 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: a;
+
+}
+
+.page2 img{
+    width: 100%;
+    height: 85vh;
+   object-fit: cover;
+}
+
+.page3{
+    width: 100%;
+    height: 170vh;
+    /* background-color: red; */
+    padding: 4vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.page3 .top{
+    text-align: center;
+    /* margin-bottom: vh; */
+}
+
+.page3 .top h4{
+    font-family: a;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 2.5vh;
+}
+
+.page3 a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    font-size: 2vh;
+    font-weight: 100;
+    position: relative;
+}
+
+.page3 a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.page3 a:hover::after{
+    width: 0%;
+}
+
+.page3 .bags{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+    height: 35vh;
+    margin-bottom: 15vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.page3 .product-card{
+    transition: all ease-in-out 1s;
+}
+
+.page3 .bags img{
+    width: 25vh;
+}
+
+.page3 .bags .hover{
+    display: none;
+}
+
+.page3 .product-card:hover .hover{
+    display: block;
+}
+
+.page3 .product-card:hover .normal{
+    display: none;
+}
+
+.page3 .elem{
+    width: 100%;
+    margin-top: -12vh;
+}
+
+.page3 .elem.first{
+    text-align: left;
+    margin-top: -20vh;
+    /* background-color: red; */
+}
+
+.page3 .elem.second{
+    text-align: right;
+    /* background-color: blue; */
+}
+
+.page3 .elem.third{
+    text-align: center;
+    /* background-color: green; */
+}
+
+.page3 .elem h1{
+    font-size: 30vh;
+    text-transform: uppercase;
+    font-family: a;
+    font-weight: 200;
+    margin-top: -5vh;
+}
+
+.page3 .para{
+    position: absolute;
+    width: 40%;
+    /* background-color: red; */
+    left: 3vh;
+    top: 57%;
+}
+
+.page3 .para p{
+    font-family: a;
+    font-size: 2.3vh;
+    letter-spacing: 1px;
+    margin-bottom: 2vh;
+}
+
+.page3 .image{
+    position: absolute;
+    bottom: 10vh;
+}
+
+.page3 .image img{
+    width: 30vw;
+}
+
+.page4{
+    width: 100%;
+    height: auto;
+}
+
+.page4 video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.page4 h2{
+    font-size: 3vh;
+    font-family: b;
+    font-weight: 100;
+}
+
+.page4 .bottom{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 35vh;
+    /* background-color: red; */
+    padding: 4vh 3vh;
+}
+
+.page4 .bottom .text{
+    width: 50%;
+}
+
+.page4 .text p{
+    font-family: a;
+    font-size: 2.5vh;
+    margin-bottom: 4vh;
+}
+
+.page4 a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    font-size: 2vh;
+    font-weight: 100;
+    position: relative;
+}
+
+.page4 a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.page4 a:hover::after{
+    width: 0%;
+}
+
+.page5 {
+    width: 100%;
+    height: 100vh; 
+    padding: 2vh 2vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+.page5 .left {
+    width: 100%;
+    height: 100%; 
+    padding-right: 2vw;
+}
+
+.page5 .right {
+    width: 50%;
+    height: 92vh;
+    margin-top: 5vh;
+    position: absolute;
+    top: 0vh;
+    right: 2vh;
+    z-index: -1;
+    /* background-color: red; */
+}
+
+.page5 .right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+}
+
+.page5 .heading h3{
+    font-family: b;
+    font-weight: 100;
+    margin-bottom: 0.5vh;
+}
+
+.page5 .products{
+    margin-top: 20vh;
+}
+
+.page5 .left .pro{
+    width: 100%;
+    height: 40vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4vh;
+}
+
+.page5 a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    font-size: 2vh;
+    font-weight: 100;
+    position: relative;
+}
+
+.page5 a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(150, 145, 145);
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.page5 .pro:hover a::after{
+    width: 100%;
+}
+
+.page5 .pro img{
+    width: 22vh;
+    height: 35vh;
+    object-fit: cover;
+}
+
+.page6{
+    margin-top: 5vh;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page6 .text{
+    z-index: 99;
+    text-align: center;
+}
+
+.page6 h3{
+    font-family: y;
+    font-weight: 100;
+    font-size: 3vh;
+    margin-bottom: 1vh;
+}
+
+.page6 a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    text-transform: uppercase;
+    font-size: 1.7vh;
+    font-weight: 600;
+    position: relative;
+}
+
+.page6 a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.page6 a:hover::after{
+    width: 0%;
+}
+
+
+.page6 img{
+    position: absolute;
+}
+
+.page6 #first{
+    width: 25vw;
+    height: 50vh;
+    object-fit: cover;
+    top: 0vh;
+    left: -25vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.page6 #second{
+    width: 25vw;
+    height: 50vh;
+    object-fit: cover;
+    top: 60vh;
+    left: -25vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 57s;
+    animation-iteration-count: infinite;
+    animation-delay: 8s;
+}
+
+.page6 #third{
+    width: 25vw;
+    height: 60vh;
+    object-fit: cover;
+    top: 10vh;
+    left: -25vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 62s;
+    animation-iteration-count: infinite;
+    animation-delay: 16s;
+}
+
+.page6 #forth{
+    width: 20vw;
+    height: 40vh;
+    object-fit: cover;
+    top: 50vh;
+    left: -20vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 64s;
+    animation-iteration-count: infinite;
+    animation-delay: 24s;
+}
+
+.page6 #fifth{
+    width: 15vw;
+    height: 35vh;
+    object-fit: cover;
+    top: 0vh;
+    left: -15vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 58s;
+    animation-iteration-count: infinite;
+    animation-delay: 32s;
+}
+
+.page6 #sixth{
+    width: 20vw;
+    height: 50vh;
+    object-fit: cover;
+    top: 50vh;
+    left: -20vw;
+    animation-name: moving;
+    animation-timing-function: linear;
+    animation-duration: 66s;
+    animation-iteration-count: infinite;
+    animation-delay: 40s;
+}
+
+@keyframes moving {
+    0%{
+        transform: translateX(0vw);
+    }
+
+    100%{
+        transform: translateX(130vw);
+    }
+}
+
+footer{
+    width: 100%;
+    height: 80vh;
+    padding: 0 2vh;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+footer .newsletter{
+    width: 100%;
+}
+
+footer .newsletter h3{
+    font-family: b;
+    font-weight: 100;
+    font-size: 2.4vh;
+}
+
+footer input{
+    font-family: z;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(136, 131, 131);
+    background-color: transparent;
+    margin-top: 2vh;
+    width: 25vw;
+}
+
+footer button{
+    background: transparent;
+    border: none;
+    font-family: z;
+    font-size: 1.6vh;
+    color: #797070fd;
+}
+
+footer .text{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 8vh;
+    border-top: 1px solid #cac2c2;
+    padding: 2vh 0;
+    height: 60vh;
+    /* background-color: red; */
+}
+
+footer .text .left{
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .part{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5vh;
+    /* width: 25%; */
+    /* background-color: red; */
+}
+
+
+footer a{
+    color: #000;
+    text-decoration: none;
+    font-family: z;
+    text-transform: uppercase;
+    font-size: 1.2vh;
+    font-weight: 400;
+    position: relative;
+}
+
+footer a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: black;
+    bottom: -0.5vh;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+footer .text .right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh;
+}
+
+footer .text img{
+    width: 2vw;
+}
+
+footer svg{
+    width: 98vw;
+}
+
+@media (max-width : 720px) {
+
+    nav .right{
+        display: none;
+    }
+
+    nav .left{
+        display: none;
+    }
+
+    nav .left.res, nav .right.res{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+    }
+
+    nav .left ,nav .right{
+        width: auto; 
+        padding: 2vh;
+        /* background-color: red; */
+    }
+
+    .page1 .product{
+        width: 70vw;
+        height: 50vh;
+        bottom: -40vh;
+    }
+
+    .page2{
+        margin-top: 40vh;
+    }
+
+    .page2 a{
+        font-size: 6vh;
+    }
+
+    .page3{
+        padding: 5vh 2vh;
+        height: 150vh;
+        position: none;
+        justify-content: space-between;
+    }
+
+    .page3 .bags{
+        padding: 2vh;
+        gap: 3vh;
+        height: 15vh;
+        /* background-color: red; */
+    }
+
+    .page3 .bags img{
+        width: 27vw;
+    }
+
+    .page3 .bags .product-card:nth-child(4){
+        display: none;
+    }
+
+    .page3 .elem{
+        margin-top: -10vh;
+    }
+
+    .page3 .elem.first{
+        text-align: center;
+        margin-top: -20vh;
+        /* background-color: red; */
+    }
+    
+    .page3 .elem.second{
+        text-align: center;
+        margin-top: -15vh;
+        /* background-color: blue; */
+    }
+    
+    .page3 .elem.third{
+        text-align: center;
+        margin-top: -15vh;
+        /* background-color: green; */
+    }
+
+    .page3 .elem h1{
+        font-size: 11vh;
+        margin-top: 0;
+    }
+    
+    .page3 .para{
+        margin-top: 15vh;
+        width: 100%;
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    } 
+
+    .page3 .image img{
+       width: 40vh;
+    }
+
+    .page4 .bottom{
+        flex-direction: column;
+        height: 50vh;
+        justify-content: center;
+    }
+
+    .page4 .bottom .text{
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+    .page5{
+        flex-direction: column;
+        height: 110vh;
+    }
+
+    .page5 .products{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        margin-top: 75vh;
+    }
+
+    .page5 .left .pro{
+        flex-direction: column;
+        width: 19vw;
+    }
+
+    .page5 .pro img{
+        width: 17vw;
+        height: 15vh;
+        object-fit: cover;
+    }
+
+    .page5 .right{
+        height: 70vh;
+        width: 90%;
+        top: 6vh;
+        left: 5vw;
+    }
+
+    .page5 .right img{
+        opacity: 1;
+    }
+
+    .page5 a{
+        font-size: 1.7vh;
+        text-wrap: wrap;
+        margin-top: -3vh;
+    }
+
+    .page6 #first{
+        height: 20vh;
+    }
+
+    .page6 #second{
+        height: 20vh;
+    }
+
+    .page6 #third{
+        height: 20vh;
+    }
+
+    .page6 #forth{
+        height: 20vh;
+    }
+
+    .page6 #fifth{
+        height: 13vh;
+    }
+
+    .page6 #sixth{
+        height: 17vh;
+    }
+
+    footer{
+        /* margin-top: 7vh; */
+        padding: 8vh 2vh;
+        height: 110vh;
+    }
+
+    footer .newsletter{
+        padding-bottom: 10vh;
+    }
+
+    footer input{
+        width: 60vw;
+        margin-top: 3vh;
+    }
+
+    footer .text{
+        flex-direction: column;
+        gap: 4vh;
+        margin-top: 0;
+        height: fit-content;
+        /* background: #000; */
+    }
+
+    footer .text .left{
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    footer .part{
+        width: 50%;
+        margin-top: 2vh;
+    }
+
+    footer .part:nth-child(3) ,footer .part:nth-child(4){
+        margin-top: 4vh;
+    }
+
+    footer a{
+        font-size: 1.5vh;
+    }
+
+    footer .text .right{
+        width: 100%;
+    }
+
+    footer .text img{
+        width: 10vw;
+    }
+
+}
